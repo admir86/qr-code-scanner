@@ -1,0 +1,19 @@
+<header>
+  <span>{{ title }}</span> <button (click)="onCloseClick()">X</button>
+</header>
+
+<span class="code-square" *ngIf="hasCamera"></span>
+
+<zxing-scanner
+  [formats]="barcodeFormat"
+  [enable]="true"
+  (camerasFound)="onCamerasFound($event)"
+  (scanSuccess)="onScanSuccess($event)"
+></zxing-scanner>
+
+<span *ngIf="!hasCamera">no cam</span>
+
+
+<footer>
+  <button (click)="onCloseClick()">Abbrechen</button>
+</footer>

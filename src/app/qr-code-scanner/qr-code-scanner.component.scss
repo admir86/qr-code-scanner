@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.code-square {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 280px;
+  height: 280px;
+  background: rgba(255, 0, 0, 0.5);
+
+  // https://unused-css.com/tools/clip-path-generator
+  clip-path: polygon(evenodd, 8% 8%, 92% 8%, 92% 92%, 8% 92%, 12% 88%, 12% 12%, 88% 12%, 88% 88%, 12% 88%, 8% 92%)
+}
